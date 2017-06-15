@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"go-structures/linked-list/list"
+)
 
 func main() {
-	fmt.Println("Test")
+	list := list.New()
+	fmt.Printf("Size: %d\n", list.Size())
+	fmt.Println("Is empty? ", list.IsEmpty())
+
+	list.AddToFront(3)
+	fmt.Printf("Size: %d\n", list.Size())
+	fmt.Println("Is empty? ", list.IsEmpty())
+
+	list.PrintForward()
 }
